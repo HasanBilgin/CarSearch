@@ -1,0 +1,29 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://localhost:8080/carSearchSoap"
+           targetNamespace="http://localhost:8080/carSearchSoap" elementFormDefault="qualified">
+
+    <xs:element name="GetCarSearchRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="criteria" type="xs:string"/>
+                <xs:element name="searchKey" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GetCarSearchResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="car" type="tns:car"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="car">
+        <xs:sequence>
+            <xs:element name="brand" type="xs:string"/>
+            <xs:element name="model" type="xs:string"/>
+            <xs:element name="type" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

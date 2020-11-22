@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:us="http://www.w3.org/2001/XMLSchema">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <us:GetCarSearchRequest>
+            <us:criteria>marka</us:criteria>
+        </us:GetCarSearchRequest>
+    </soapenv:Body>
+</soapenv:Envelope>
