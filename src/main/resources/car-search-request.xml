@@ -1,9 +1,9 @@
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
-                  xmlns:us="http://www.w3.org/2001/XMLSchema">
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:gs="http://spring.io/guides/gs-producing-web-service">
     <soapenv:Header/>
     <soapenv:Body>
-        <us:GetCarSearchRequest>
-            <us:criteria>marka</us:criteria>
-        </us:GetCarSearchRequest>
+        <gs:getCarSearchRequest>
+            <gs:criteria>marka</gs:criteria>
+            <gs:searchKey>Audi</gs:searchKey>
+        </gs:getCarSearchRequest>
     </soapenv:Body>
 </soapenv:Envelope>

@@ -1,7 +1,7 @@
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://localhost:8080/carSearchSoap"
-           targetNamespace="http://localhost:8080/carSearchSoap" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+           targetNamespace="http://spring.io/guides/gs-producing-web-service" elementFormDefault="qualified">
 
-    <xs:element name="GetCarSearchRequest">
+    <xs:element name="getCarSearchRequest">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="criteria" type="xs:string"/>
@@ -10,7 +10,7 @@
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="GetCarSearchResponse">
+    <xs:element name="getCarSearchResponse">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="car" type="tns:car"/>
