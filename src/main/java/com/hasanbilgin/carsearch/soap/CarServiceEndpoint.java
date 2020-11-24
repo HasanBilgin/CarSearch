@@ -7,6 +7,8 @@ import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
+import java.util.stream.Collectors;
+
 @Endpoint
 public class CarServiceEndpoint {
     private static final String NAMESPACE_URI = "http://spring.io/guides/gs-producing-web-service";
@@ -22,12 +24,13 @@ public class CarServiceEndpoint {
     @ResponsePayload
     public GetCarSearchResponse getCarSearchRequest(@RequestPayload GetCarSearchRequest request) {
         GetCarSearchResponse response = new GetCarSearchResponse();
-        service.search(request.getCriteria(),request.getSearchKey());
-        Car car = new Car();
-        car.setBrand("asd");
-        car.setModel("asd");
-        car.setType("asd");
-        response.setCar(car);
+        service.search(request.getCriteria(),request.getSearchKey()).stream().forEach(car -> {
+            Car c  = new Car();
+            c.setType(car.getType());
+            c.setModel(car.getModel());
+            c.setBrand(car.getBrand());
+            response.getCar().add(c);
+        });
         return response;
     }
 }
