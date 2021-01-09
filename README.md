@@ -16,14 +16,14 @@ URL : localhost:8080/cars
 Method : GET
 Örnek input:
 
-{
+```{
     "key": "a",
     "criteria": "marka"
 }
-
+```
 criteria alanına "marka","model","sınıf","hepsi" kriterlerine göre araba dosyası içerisinde key bilgisi geçen tüm arabaları listeler.
 
-[
+```[
     {
         "brand": "Audi",
         "model": "A3",
@@ -40,6 +40,7 @@ criteria alanına "marka","model","sınıf","hepsi" kriterlerine göre araba dos
         "type": "Otomobil"
     }
 ]
+```
 ----------------------------------------------------------------------------------------
 Aynı sorgu parametre vermeden aşağıdaki gibi çalışabilmektedir.
 localhost:8080/{criteria}/{key}
